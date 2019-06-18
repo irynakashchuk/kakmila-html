@@ -1,0 +1,16 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "description": "Standard gulp config",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "browser-sync": "^2.26.3",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-image": "^4.4.1",
+    "gulp-sass": "^3.2.1"
+  }
+}

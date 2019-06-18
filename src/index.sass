@@ -1,0 +1,659 @@
+
+@font-face
+    font-family: Museo Lighter
+    src: url('/fonts/MuseoSansCyrl-300.otf')
+@font-face
+    font-family: Museo Light
+    src: url('/fonts/MuseoSansCyrl-500.otf')
+@font-face
+    font-family: Museo Normal
+    src: url('/fonts/MuseoSansCyrl-700.otf')
+@font-face
+    font-family: Museo Bold
+    src: url('/fonts/MuseoSansCyrl-900.otf')
+    
+// text colors
+$dark-grey: #414141
+$grey: #8f8f8f
+$darker-grey: #212121
+$pink: #f34970
+$dark-red: #DC4064
+
+// background colors
+$lightest-grey: #f4fcfb
+$white: #ffffff
+$lighter-grey: #ebebeb
+$the-lightest-grey: #F2F2F2
+
+// another colors
+$some-grey: #e5e5e5
+$pure-pink: #fea6B2
+$blue: #75ded5
+
+$linear-gradient: linear-gradient(180deg, #F86486 0%, #F13D68 100%)
+
+// width wrapper
+$large-width: 1280px
+
+
+// font styles
+=font-lighter($size)
+    font-size: $size
+    font-family: Museo Lighter
+
+=font-light($size)
+    font-size: $size
+    font-family: Museo Light
+
+=font-normal($size)
+    font-size: $size
+    font-family: Museo Normal
+
+=font-bold($size)
+    font-size: $size
+    font-family: Museo Bold
+
+=font-italic($size)
+    font-size: $size
+    font-family: 'Playfair Display', sans-serif
+    font-style: italic
+    font-weight: 400
+
+// COMMON
+*
+    box-sizing: border-box
+body
+    +font-normal(14px)
+    margin: 0
+    color: $dark-grey
+.wrapper
+    width: $large-width
+    margin: 0 auto
+
+// styles for links
+a
+    color: inherit
+    text-decoration: none
+a.nav-link
+    &:hover
+        color: $pink
+.link
+    color: $pink
+    text-decoration: underline
+    +font-light(14px)
+    &:hover
+        +font-normal(14px)
+    &::after
+        display: block
+        content: attr(title)
+        font-weight: bold
+        height: 0
+        overflow: hidden
+        visibility: hidden
+.link.disabled
+    color: $grey
+    +font-light(14px)
+.pink
+    color: $pink
+
+// dropdown
+.dropdown
+    transition: top .4s ease-out, opacity .1s linear
+    *
+        transition: all .5s linear .25s
+
+// standard styles for titles
+.title
+    +font-bold(48px)
+.medium-title
+    +font-bold(22px)
+    color: $dark-grey
+    &.light
+        +font-lighter(22px)
+
+// tab button/sorting
+.tab-button
+    border-radius: 20px
+    padding: 9px 38px
+    +font-light(18px)
+    color: $dark-grey
+    background: $lighter-grey
+    cursor: pointer
+    &:hover
+        background: $the-lightest-grey
+        color: $dark-grey
+    &.active
+        +font-bold(18px)
+        color: $white
+        background: $pink
+        cursor: default
+        &:hover
+            +font-bold(18px)
+            color: $white
+            background: $pink
+
+// button
+.btn
+    padding: 10px 15px
+    +font-normal(14px)
+    background: $linear-gradient
+    box-shadow: 0px 10px 35px rgba(243, 73, 112, 0.5)
+    border-radius: 37.5px
+    border: none
+    color: $white
+    cursor: pointer
+    &.uppercase
+        text-transform: uppercase
+    &:hover
+        background: linear-gradient(180deg, #EE4C73 0%, #E71C4C 100%)
+
+// italic
+.italic
+    +font-italic(36px)
+
+
+// HEADER
+header
+    +font-light(14px)
+    z-index: 1
+    position: relative
+    z-index: 1
+    .wrapper
+        padding-left: 170px
+    .top-menu
+        width: 100%
+        background: $lightest-grey
+        height: 40px
+        padding: 10px 0
+        position: relative
+        z-index: 2
+        .top
+            height: 100%
+            position: relative
+            display: flex
+            flex-flow: row nowrap
+            justify-content: space-between
+            align-items: center
+            nav
+                width: 440px
+                display: flex
+                justify-content: space-between
+                margin-right: 85px
+                color: $grey
+            .logo-white
+                position: absolute
+                background: $pink
+                width: 110px
+                height: 160px
+                display: flex
+                align-items: center
+                justify-content: center
+                top: -10px
+                left: 0
+                box-shadow: 2px 4px 15px rgba(76, 1, 37, 0.15)
+                border-radius: 0px 0px 10px 10px
+            .phones-list
+                display: flex
+                flex-flow: row nowrap
+                justify-content: flex-start
+                align-items: center
+                margin-right: 30px
+            .phone
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                margin-right: 30px
+                &:last-child
+                    margin-right: 0
+                img
+                    margin-right: 8px
+            .call-back
+                width: 110px
+                text-align: center
+    .main-menu
+        height: 60px
+        background: $white
+        .wrapper
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-flow: row nowrap
+            height: 100%
+        nav
+            color: $dark-grey
+            height: 100%
+            display: flex
+            align-items: center
+            position: relative
+            z-index: 1
+            .menu-item
+                height: 100%
+                display: flex
+                align-items: center
+                padding: 0 15px
+                background: $white
+                &:not(:last-child)
+                    margin-right: 5px
+                &:not(:hover)
+                    background: $white
+                &:hover
+                    background: $pink
+                    color: $white
+                    .sub-menu
+                        opacity: 1
+                        top: 100%
+                        a
+                            opacity: 1
+        .sub-menu
+            position: absolute
+            top: -300px
+            left: 0
+            background: $white
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+            opacity: 0
+            z-index: -2
+            nav
+                display: flex
+                flex-flow: column
+                align-items: flex-start
+                justify-content: flex-start
+                padding: 25px 30px 25px 40px
+                a
+                    width: 100%
+                    white-space: nowrap
+                    opacity: 0
+                    +font-light(14px)
+                    &:not(:last-child)
+                        margin-bottom: 30px
+        .right
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-flow: row
+        .search
+            margin-right: 30px
+            padding-top: 6px
+        .cart
+            display: flex
+            flex-flow: row nowrap
+            justify-content: flex-start
+            align-items: center
+            img
+                margin-right: 19px
+            & > div
+                display: flex
+                flex-flow: column
+            .total
+                +font-bold(18px)
+            .count-items
+                color: $darker-grey
+                +font-light(12px)
+
+// BANNER    
+.banner
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 120px
+    img
+        width: 100%
+        top: 0
+        left: 0
+        height: 100%
+    .slider-text
+        width: 635px
+        color: $dark-grey
+        position: absolute
+        h1
+            +font-bold(66px)
+
+// CATEGORY
+.category-list
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    .line
+        display: flex
+        flex-flow: row wrap
+        justify-content: flex-start
+    .category-item
+        margin-right: 30px
+        max-width: 297px
+        text-decoration: none
+        margin-bottom: 40px
+        &:nth-child(4n) 
+            margin-right: 0
+        img
+            width: 100%
+            object-fit: cover
+            height: 390px
+            border-radius: 10px
+        p
+            height: 2em
+            margin: 18px 0 0
+        &:hover
+            p
+                opacity: 0.6
+            img
+                box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25)
+        &:nth-child(1),
+        &:nth-child(3n):not(:nth-child(4n)),
+        &:nth-child(8n),
+        &:nth-child(11)
+            img
+                height: 420px
+        &:nth-child(n+5)
+            align-self: flex-end
+        &:nth-child(n+8)
+            align-self: flex-start
+
+// HOLIDAY-CATEGORY
+.holiday-section
+    background-image: url('images/bg-holidays-elem.png'), url('images/bg-holidays.jpg')
+    background-position: center, center
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 100px 0
+    margin-bottom: 100px
+    h2
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 45px
+    .holiday-list
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        align-items: flex-start
+        .holiday-item 
+            width: 20%
+            margin-bottom: 60px
+            .item-content
+                max-width: 190px
+                margin: 0 auto
+                display: flex
+                flex-flow: column
+                align-items: center
+                &:hover
+                    .holiday-image
+                        box-shadow: 0px 6px 15px rgba(243, 73, 112, 0.25)
+                    p
+                        color: $pink
+            .holiday-image
+                transition: 0.3s
+                border-radius: 50%
+                background: $white
+                width: 100px
+                height: 100px
+                display: flex
+                align-items: center
+                justify-content: center
+            p
+                transition: all 0.3s
+                text-align: center
+                margin: 20px 0 0
+
+// POPULAR
+.popular
+    .popular-header
+        display: flex
+        align-items: center
+        justify-content: space-between
+.filter-bar
+    display: flex
+    align-items: center
+    justify-content: flex-end
+.filter
+    margin-left: 30px
+
+// PRODUCT CARD
+.product-card
+    width: 297px
+    border: 1px solid $some-grey
+    border-radius: 6px
+    height: 545px
+    display: block
+    position: relative
+    margin-right: 30px
+    margin-bottom: 30px
+    &:nth-child(4n)
+        margin-right: 0
+    &:hover
+        .name
+            color: $pink
+    .product-image
+        height: 340px
+        width: 100%
+        object-fit: cover
+        border-radius: 6px
+    .product-info
+        padding: 16px 20px 20px
+        .name
+            margin: 0 0 10px
+        .available
+            +font-lighter(12px)
+            color: $grey
+            margin-bottom: 20px
+        .cost
+            color: $pink
+            +font-bold(18px)
+            text-transform: uppercase
+        .buy-info
+            display: flex
+            align-items: center
+            justify-content: space-between
+        .buy
+            width: 100px
+            font-size: 18px
+    .special
+        position: absolute
+        top: 10px
+        left: -10px
+        height: 30px
+        width: 80px
+        color: $white
+        +font-normal(12px)
+        display: flex
+        align-items: center
+        justify-content: center
+        text-transform: uppercase
+        &.sale
+            background: $pure-pink
+            box-shadow: 0px 2px 15px $pure-pink
+            +font-normal(16px)
+        &.new
+            background: $blue
+            box-shadow: 0px 2px 15px $blue
+        &.hit
+            background: $pink
+            box-shadow: 0px 2px 15px $pink
+
+// PRODUCT LIST
+.product-list
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    flex-flow: row wrap
+    margin-bottom: 120px
+
+// THEME-PARTY
+.theme-party
+    background: url("images/theme-party-bg.png") no-repeat
+    padding: 195px 215px
+    .theme-party-text
+        color: $white
+        width: 40%
+        line-height: 4.5em
+        button
+            padding: 30px 60px
+        span
+            position: relative
+            svg
+                position: absolute
+                top: 115%
+                right: -10%
+                transform: rotate(-5.94deg)
+
+// HOW TO MAKE ORDER
+.how-to-make-order
+    margin-bottom: 120px
+    h3
+        text-align: center
+        margin-bottom: 100px
+    .stages
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        .stage
+            display: flex
+            flex-flow: column
+            justify-content: flex-start
+            align-items: center
+            padding: 0 20px
+            width: 20%
+            position: relative
+            &:before
+                content: ""
+                position: absolute
+                top: 50px
+                left: calc(50% + 25px)
+                width: 99%
+                height: 1px
+                background: $the-lightest-grey
+            &:last-child:before
+                width: 50%
+            p
+                margin: 0
+            &:hover
+                .number
+                    box-shadow: 0px 10px 30px rgba(243, 73, 112, 0.7)
+                    &:after
+                        opacity: 1
+                        width: 200px
+                        height: 200px
+            .number
+                color: $white
+                padding: 21px
+                background: $linear-gradient
+                border-radius: 50%
+                position: relative
+                margin-bottom: 20px
+                transition: all .5s
+                &:after
+                    content: ""
+                    position: absolute
+                    top: -65px
+                    left: -60px
+                    width: 100px
+                    height: 100px
+                    background: url('images/active-stage.svg')
+                    opacity: 0
+                    transition: all .5s
+            .medium-title
+                text-align: center
+
+// CAR SECTION
+
+.car
+    position: relative
+    margin-bottom: 120px
+    .note
+        position: absolute
+        z-index: 3
+        bottom: 30px 
+        left: 35%
+        background: $white
+        width: 260px
+        height: 220px
+        border: 10px solid $pink
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15)
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            position: absolute
+            top: -50%
+            right: -30%
+        .italic
+            font-size: 22px
+            width: 70%
+    .animated-car
+        position: absolute
+        z-index: 2
+        width: 55%
+        left: 0
+        top: -10%
+    .wrapper
+        position: relative
+        z-index: 1
+        .back-car
+            width: 100%
+            display: flex
+            justify-content: flex-end
+            padding: 85px 45px 220px
+            align-items: flex-start
+            background: $the-lightest-grey
+            &:after
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: url("../images/back-car.png")
+                z-index: 1
+    .make-order
+        width: 471px
+        z-index: 2
+        position: relative
+        p
+            margin-bottom: 40px
+        .btn
+            padding: 30px 100px
+
+// ADVANTAGES
+
+.advantages
+    margin-bottom: 120px
+    h3
+        text-align: center
+    .advantages-list
+        display: flex
+        justify-content: space-between
+        .advantage-item
+            background: $pink
+            color: $white
+            padding: 30px
+            width: 23%
+            overflow: hidden
+            border-radius: 10px
+            transition: all 0.2s
+            &:hover
+                box-shadow: 0px 10px 25px rgba(243, 73, 112, 0.5)
+            .icon
+                width: 100px
+                height: 100px
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15)
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 50%
+                position: relative
+                margin-bottom: 100px
+                &:after
+                    content: ""
+                    position: absolute
+                    border: 30px solid $dark-red
+                    left: -55px
+                    top: -55px
+                    background: transparent
+                    width: 150%
+                    height: 150%
+                    border-radius: 50%
+            .medium-title
+                color: $white
+            p:last-child
+                +font-lighter(14px)
+                line-height: 24px
+
+// 8.3 hours
