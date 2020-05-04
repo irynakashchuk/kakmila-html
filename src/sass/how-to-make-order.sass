@@ -1,0 +1,57 @@
+// HOW TO MAKE ORDER
+.how-to-make-order
+    margin-bottom: 120px
+    h3
+        text-align: center
+        margin-bottom: 100px
+    .stages
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        .stage
+            display: flex
+            flex-flow: column
+            justify-content: flex-start
+            align-items: center
+            padding: 0 20px
+            width: 20%
+            position: relative
+            &:before
+                content: ""
+                position: absolute
+                top: 50px
+                left: calc(50% + 25px)
+                width: 99%
+                height: 1px
+                background: $the-lightest-grey
+            &:last-child:before
+                width: 50%
+            p
+                margin: 0
+            &:hover
+                .number
+                    box-shadow: 0px 10px 30px rgba(243, 73, 112, 0.7)
+                    &:after
+                        opacity: 1
+                        width: 200px
+                        height: 200px
+            .number
+                color: $white
+                padding: 21px
+                background: $linear-gradient
+                border-radius: 50%
+                position: relative
+                margin-bottom: 20px
+                transition: all .5s
+                &:after
+                    content: ""
+                    position: absolute
+                    top: -65px
+                    left: -60px
+                    width: 100px
+                    height: 100px
+                    background: url('images/active-stage.svg')
+                    opacity: 0
+                    transition: all .5s
+            .medium-title
+                text-align: center

@@ -1,94 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i&amp;subset=cyrillic" rel="stylesheet">
-
-</head>
+//= ./partials/head.html
 <body>
-    <header>
-        <div class="top-menu">
-            <div class="wrapper top">
-                <div class="logo-white">
-                    <a href="#">
-                        <img src="images/logo-white.svg" alt="">
-                    </a>
-                </div>
-                <nav>
-                    <a class="nav-link" href="#">Опт и Розница</a>
-                    <a class="nav-link" href="#">Отзывы</a>
-                    <a class="nav-link" href="#">Вопросы и ответы</a>
-                    <a class="nav-link" href="#">Контакты</a>
-                </nav>
-                <div class="phones-list">
-                    <div class="phone">
-                        <img src="images/phone.svg" alt="">
-                        <span>(068) 343 03 43</span>
-                    </div>
-                    <div class="phone">
-                        <img src="images/phone.svg" alt="">
-                        <span>(066) 232 16 16</span>
-                    </div>
-                    <div class="phone">
-                        <img src="images/phone.svg" alt="">
-                        <span>(063) 232 16 16</span>
-                    </div>
-                </div>
-                <a class="call-back link pink" href="#">
-                    Заказать звонок
-                </a>
-            </div>
-        </div>
-        <div class="main-menu">
-            <div class="wrapper">
-                <nav>
-                    <div class="menu-item" href="#">
-                        <a href="#">Воздушные шары</a>
-                        <div class="dropdown sub-menu">
-                            <nav>
-                                <a class="nav-link" href="#">Печать на шариках</a>
-                                <a class="nav-link" href="#">Товары для праздника</a>
-                                <a class="nav-link" href="#">Декор из бумаги</a>
-                                <a class="nav-link" href="#">Сладости</a>
-                                <a class="nav-link" href="#">Композиции</a>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="menu-item" href="#">
-                        <a href="#">Печать на шариках</a>
-                    </div>
-                    <div class="menu-item" href="#">
-                        <a href="#">Товары для праздника</a>
-                    </div>
-                    <div class="menu-item" href="#">
-                        <a href="#">Декор из бумаги</a>
-                    </div>
-                    <div class="menu-item" href="#">
-                        <a href="#">Сладости</a>
-                    </div>
-                    <div class="menu-item" href="#">
-                        <a href="#">Композиции</a>
-                    </div>
-                </nav>
-                <div class="right">
-                    <a href="#" class="search">
-                        <img src="images/search.svg" alt="">
-                    </a>
-                    <a href="#" class="cart">
-                        <img src="images/cart.svg" alt="">
-                        <div>
-                            <span class="total pink">300 грн</span>
-                            <span class="count-items">1 товар в корзине</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+    //= ./partials/header.html
     <section class="banner">
         <img src="images/home-banner.png" alt="">
         <div class="slider-text">
@@ -221,159 +135,19 @@
             </div>
         </div>
         <div class="product-list">
-            <a href="#" class="product-card">
-                <div class="special sale">-10%</div>
-                <img class="product-image" src="images/cat-1.png" alt="">
-                <div class="product-info">
-                    <p class="name medium-title">Композиция №1 название в три строки, например, максимум</p>
-                    <p class="available">
-                        <span>В НАЛИЧИИ</span> / <span>Арт. GC-37</span>
-                    </p>
-                    <p class="buy-info">
-                        <span class="cost">980 uah</span>
-                        <button class="btn buy">Купить</button>
-                    </p>
-                </div>
-            </a>
-            <a href="#" class="product-card">
-                <div class="special new">Новинка</div>
-                <img class="product-image" src="images/cat-1.png" alt="">
-                <div class="product-info">
-                    <p class="name medium-title">Композиция №1 название в три строки, например, максимум</p>
-                    <p class="available">
-                        <span>В НАЛИЧИИ</span> / <span>Арт. GC-37</span>
-                    </p>
-                    <p class="buy-info">
-                        <span class="cost">980 uah</span>
-                        <button class="btn buy">Купить</button>
-                    </p>
-                </div>
-            </a>
-            <a href="#" class="product-card">
-                <div class="special hit">Хит</div>
-                <img class="product-image" src="images/cat-1.png" alt="">
-                <div class="product-info">
-                    <p class="name medium-title">Композиция №1 название в три строки, например, максимум</p>
-                    <p class="available">
-                        <span>В НАЛИЧИИ</span> / <span>Арт. GC-37</span>
-                    </p>
-                    <p class="buy-info">
-                        <span class="cost">980 uah</span>
-                        <button class="btn buy">Купить</button>
-                    </p>
-                </div>
-            </a>
-             <a href="#" class="product-card">
-                <div class="special new">Новинка</div>
-                <img class="product-image" src="images/cat-1.png" alt="">
-                <div class="product-info">
-                    <p class="name medium-title">Композиция №1 название в три строки, например, максимум</p>
-                    <p class="available">
-                        <span>В НАЛИЧИИ</span> / <span>Арт. GC-37</span>
-                    </p>
-                    <p class="buy-info">
-                        <span class="cost">980 uah</span>
-                        <button class="btn buy">Купить</button>
-                    </p>
-                </div>
-            </a>
-            <a href="#" class="product-card">
-                <div class="special hit">Хит</div>
-                <img class="product-image" src="images/cat-1.png" alt="">
-                <div class="product-info">
-                    <p class="name medium-title">Композиция №1 название в три строки, например, максимум</p>
-                    <p class="available">
-                        <span>В НАЛИЧИИ</span> / <span>Арт. GC-37</span>
-                    </p>
-                    <p class="buy-info">
-                        <span class="cost">980 uah</span>
-                        <button class="btn buy">Купить</button>
-                    </p>
-                </div>
-            </a>
-            <a href="#" class="product-card">
-                <div class="special sale">-10%</div>
-                <img class="product-image" src="images/cat-1.png" alt="">
-                <div class="product-info">
-                    <p class="name medium-title">Композиция №1 название в три строки, например, максимум</p>
-                    <p class="available">
-                        <span>В НАЛИЧИИ</span> / <span>Арт. GC-37</span>
-                    </p>
-                    <p class="buy-info">
-                        <span class="cost">980 uah</span>
-                        <button class="btn buy">Купить</button>
-                    </p>
-                </div>
-            </a>
-            <a href="#" class="product-card">
-                <div class="special new">Новинка</div>
-                <img class="product-image" src="images/cat-1.png" alt="">
-                <div class="product-info">
-                    <p class="name medium-title">Композиция №1 название в три строки, например, максимум</p>
-                    <p class="available">
-                        <span>В НАЛИЧИИ</span> / <span>Арт. GC-37</span>
-                    </p>
-                    <p class="buy-info">
-                        <span class="cost">980 uah</span>
-                        <button class="btn buy">Купить</button>
-                    </p>
-                </div>
-            </a>
-            <a href="#" class="product-card">
-                <div class="special hit">Хит</div>
-                <img class="product-image" src="images/cat-1.png" alt="">
-                <div class="product-info">
-                    <p class="name medium-title">Композиция №1 название в три строки, например, максимум</p>
-                    <p class="available">
-                        <span>В НАЛИЧИИ</span> / <span>Арт. GC-37</span>
-                    </p>
-                    <p class="buy-info">
-                        <span class="cost">980 uah</span>
-                        <button class="btn buy">Купить</button>
-                    </p>
-                </div>
-            </a>
+            <!-- can be sale, new and hit class -->
+            //= ./partials/product-card.html
+            //= ./partials/product-card.html
+            //= ./partials/product-card.html
+            //= ./partials/product-card.html
+            //= ./partials/product-card.html
+            //= ./partials/product-card.html
+            //= ./partials/product-card.html
+            //= ./partials/product-card.html
         </div>
     </section>
-    <section class="theme-party">
-        <div class="wrapper">
-            <div class="theme-party-text">
-                <h3 class="title">У тебя тематическая вечеринка?
-                    <span class="italic">Жми сюда
-                        <svg width="132" height="95" viewBox="0 0 132 95" fill="none">
-                            <path d="M121.356 1.99988C119.922 26.6815 106.38 40.9534 83.5902 55.9956C70.0856 64.9092 56.1253 72.4507 39.7447 76.087C36.0966 76.8969 14.2029 80.187 14.5766 79.4697C15.6605 77.3897 18.2601 72.0379 19.9264 70.5121C21.5811 68.9969 22.1363 67.2244 21.9269 65.2125C21.5581 61.668 17.0268 71.0807 14.3885 73.8887C-1.39214 90.6847 21.8717 84.4815 35.1483 90.3971" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </span>   
-                </h3>
-                <button class="btn uppercase">Оформить праздник</button>
-            </div>
-        </div>
-    </section>
-    <section class="how-to-make-order wrapper">
-        <h3 class="title">Как сделать заказ?</h3>
-        <div class="stages">
-            <div class="stage active">
-                <p class="number title">01</p>
-                <p class="medium-title light">Оформите заказ на нашем сайте</p>
-            </div>
-            <div class="stage">
-                <p class="number title">02</p>
-                <p class="medium-title light">Подтвердите заказ при разговоре с нашим менеджером</p>
-            </div>
-            <div class="stage">
-                <p class="number title">03</p>
-                <p class="medium-title light">Оплатите заказ по высланным Вам реквизитам</p>
-            </div>
-            <div class="stage">
-                <p class="number title">04</p>
-                <p class="medium-title light">Создаём для Вас яркие подарочки</p>
-            </div>
-            <div class="stage">
-                <p class="number title">05</p>
-                <p class="medium-title light">Получите Ваш заказ и наслаждайтесь подарочками :)</p>
-            </div>
-        </div>
-    </section>
+    //= ./partials/theme-party.html
+    //= ./partials/how-to-make-order.html
     <section class="car">
         <img src="images/car.png" alt="" class="animated-car">
         <div class="wrapper">

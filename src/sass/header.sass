@@ -1,0 +1,136 @@
+// HEADER
+header
+    +font-light(14px)
+    z-index: 1
+    position: relative
+    z-index: 1
+    .wrapper
+        padding-left: 170px
+    .top-menu
+        width: 100%
+        background: $lightest-grey
+        height: 40px
+        padding: 10px 0
+        position: relative
+        z-index: 2
+        .top
+            height: 100%
+            position: relative
+            display: flex
+            flex-flow: row nowrap
+            justify-content: space-between
+            align-items: center
+            nav
+                width: 440px
+                display: flex
+                justify-content: space-between
+                margin-right: 85px
+                color: $grey
+            .logo-white
+                position: absolute
+                background: $pink
+                width: 110px
+                height: 160px
+                display: flex
+                align-items: center
+                justify-content: center
+                top: -10px
+                left: 0
+                box-shadow: 2px 4px 15px rgba(76, 1, 37, 0.15)
+                border-radius: 0px 0px 10px 10px
+            .phones-list
+                display: flex
+                flex-flow: row nowrap
+                justify-content: flex-start
+                align-items: center
+                margin-right: 30px
+            .phone
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                margin-right: 30px
+                &:last-child
+                    margin-right: 0
+                img
+                    margin-right: 8px
+            .call-back
+                width: 110px
+                text-align: center
+    .main-menu
+        height: 60px
+        background: $white
+        .wrapper
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-flow: row nowrap
+            height: 100%
+        nav
+            color: $dark-grey
+            height: 100%
+            display: flex
+            align-items: center
+            position: relative
+            z-index: 1
+            .menu-item
+                height: 100%
+                display: flex
+                align-items: center
+                padding: 0 15px
+                background: $white
+                &:not(:last-child)
+                    margin-right: 5px
+                &:not(:hover)
+                    background: $white
+                &:hover
+                    background: $pink
+                    color: $white
+                    .sub-menu
+                        opacity: 1
+                        top: 100%
+                        a
+                            opacity: 1
+        .sub-menu
+            position: absolute
+            top: -300px
+            left: 0
+            background: $white
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+            opacity: 0
+            z-index: -2
+            nav
+                display: flex
+                flex-flow: column
+                align-items: flex-start
+                justify-content: flex-start
+                padding: 25px 30px 25px 40px
+                a
+                    width: 100%
+                    white-space: nowrap
+                    opacity: 0
+                    +font-light(14px)
+                    &:not(:last-child)
+                        margin-bottom: 30px
+        .right
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-flow: row
+        .search
+            margin-right: 30px
+            padding-top: 6px
+        .cart
+            display: flex
+            flex-flow: row nowrap
+            justify-content: flex-start
+            align-items: center
+            img
+                margin-right: 19px
+            & > div
+                display: flex
+                flex-flow: column
+            .total
+                +font-bold(18px)
+            .count-items
+                color: $darker-grey
+                +font-light(12px)

@@ -3,7 +3,8 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
-const image = require('gulp-image')
+const image = require('gulp-image');
+var rigger = require('gulp-rigger');
 
 
 const autoprefixerOptions = {
@@ -24,6 +25,7 @@ gulp.task('sass', function() {
 
 gulp.task('html', function() {
     return gulp.src('./src/**/*.html')
+    .pipe(rigger())
     .pipe(gulp.dest('./dist'))
 })
 

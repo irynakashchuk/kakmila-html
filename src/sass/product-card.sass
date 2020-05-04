@@ -1,0 +1,61 @@
+// PRODUCT CARD
+.product-card
+    width: 297px
+    border: 1px solid $some-grey
+    border-radius: 6px
+    height: 545px
+    display: block
+    position: relative
+    margin-right: 30px
+    margin-bottom: 30px
+    &:nth-child(4n)
+        margin-right: 0
+    &:hover
+        .name
+            color: $pink
+    .product-image
+        height: 340px
+        width: 100%
+        object-fit: cover
+        border-radius: 6px
+    .product-info
+        padding: 16px 20px 20px
+        .name
+            margin: 0 0 10px
+        .available
+            +font-lighter(12px)
+            color: $grey
+            margin-bottom: 20px
+        .cost
+            color: $pink
+            +font-bold(18px)
+            text-transform: uppercase
+        .buy-info
+            display: flex
+            align-items: center
+            justify-content: space-between
+        .buy
+            width: 100px
+            font-size: 18px
+    .special
+        position: absolute
+        top: 10px
+        left: -10px
+        height: 30px
+        width: 80px
+        color: $white
+        +font-normal(12px)
+        display: flex
+        align-items: center
+        justify-content: center
+        text-transform: uppercase
+        &.sale
+            background: $pure-pink
+            box-shadow: 0px 2px 15px $pure-pink
+            +font-normal(16px)
+        &.new
+            background: $blue
+            box-shadow: 0px 2px 15px $blue
+        &.hit
+            background: $pink
+            box-shadow: 0px 2px 15px $pink
