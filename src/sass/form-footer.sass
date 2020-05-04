@@ -1,0 +1,54 @@
+.footer-form
+	background: url('images/form-footer.png')
+	background-repeat: no-repeat
+	padding: 120px 0
+	.wrapper
+		display: flex
+		flex-flow: row
+		justify-content: flex-start
+	.form-text
+		max-width: 450px
+		h4
+			color: $white
+		p
+			+font-lighter(22px)
+			width: 320px
+			line-height: 32px
+	.form
+		position: relative
+		display: flex
+		align-items: center
+		.arrow-area
+			display: flex
+			flex-flow: row
+			width: 110px
+			height: 100%
+			padding-left: 110px
+			position: relative
+			p
+				color: $white
+				width: 260px
+				margin: 0
+				transform: rotate(-90deg)
+				position: absolute
+				bottom: 90px
+				left: -110px
+			img
+				height: 100px
+				position: absolute
+				top: 0
+				left: 0
+		form
+			background: $white
+			border: 10px solid $pink
+			padding: 80px 55px 60px
+			display: flex
+			flex-flow: column
+			margin-right: 70px
+			min-width: 410px
+			input
+				margin-bottom: 30px
+				height: 33px
+			button
+				+font-lighter(14px)
+				height: 75px
