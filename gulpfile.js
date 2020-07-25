@@ -15,7 +15,7 @@ const autoprefixerOptions = {
  * Compile Sass.
  */
 gulp.task('sass', function() {
-    return gulp.src('./src/**/*.sass') 
+    return gulp.src(['./src/**/*.sass', './src/**/*.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))                    
     .pipe(gulp.dest('./dist'));         
@@ -27,6 +27,13 @@ gulp.task('html', function() {
     return gulp.src('./src/**/*.html')
     .pipe(rigger())
     .pipe(gulp.dest('./dist'))
+})
+
+// js
+
+gulp.task('js', function() {
+    return gulp.src('./src/**/*.js')
+        .pipe(gulp.dest('./dist'))
 })
 
 // images
@@ -60,9 +67,11 @@ gulp.task('watch', function() {
     gulp.watch('./src/**/*.sass', ['sass']);
     gulp.watch('./src/**/*.html', ['html']);
     gulp.watch('./src/images/*', ['image']);
+    gulp.watch('./src/**/*.js', ['js']);
     gulp.watch("./src/**/*.html").on('change', browserSync.reload);
     gulp.watch("./src/**/*.sass").on('change', browserSync.reload);
     gulp.watch('./src/images/*').on('change', browserSync.reload);
+    gulp.watch("./src/**/*.js").on('change', browserSync.reload);
 })
 
-gulp.task('default', ['browser-sync', 'watch', 'sass', 'html', 'image', 'fonts'])
+gulp.task('default', ['browser-sync', 'watch', 'sass', 'html', 'image', 'fonts', 'js'])

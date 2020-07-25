@@ -1,13 +1,34 @@
+@import "../sass/common/fonts.sass"
+@import "../sass/common/variables.sass"
+@import "../sass/common/mixins.sass"
+
 // THEME-PARTY
 .theme-party
     background: url("images/theme-party-bg.png") no-repeat
     padding: 195px 215px
+    @include max-extra-large
+        background-position: 50% 0
+        padding: 176px 150px
+    @include max-large
+        padding: 0
+        background-size: cover
     .theme-party-text
         color: $white
         width: 40%
         line-height: 4.5em
+        @include max-extra-large
+            width: 50%
+        @include max-large
+            padding: 140px 0
+            .title
+                font-size: 30px
+                line-height: 1.5em
+            .italic
+                font-size: 24px
         button
             padding: 30px 60px
+            @include max-large
+                padding: 15px 30px
         span
             position: relative
             svg
@@ -15,3 +36,6 @@
                 top: 115%
                 right: -10%
                 transform: rotate(-5.94deg)
+                @include max-large
+                    right: -70px
+                    top: 65%

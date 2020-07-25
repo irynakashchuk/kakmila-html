@@ -1,3 +1,7 @@
+@import "../sass/common/fonts.sass"
+@import "../sass/common/variables.sass"
+@import "../sass/common/mixins.sass"
+
 // PRODUCT CARD
 .product-card
     width: 297px
@@ -8,8 +12,17 @@
     position: relative
     margin-right: 30px
     margin-bottom: 30px
+    @include max-extra-large
+        width: 227px
+    @include max-large
+        width: 209px
+        height: 445px
+        &:nth-child(3n)
+            margin-right: 0
     &:nth-child(4n)
         margin-right: 0
+        @include max-large
+            margin-right: 30px
     &:hover
         .name
             color: $pink
@@ -18,22 +31,35 @@
         width: 100%
         object-fit: cover
         border-radius: 6px
+        @include max-large
+            height: 245px
     .product-info
         padding: 16px 20px 20px
         .name
             margin: 0 0 10px
+            @include max-large
+                font-size: 14px
         .available
             +font-lighter(12px)
             color: $grey
             margin-bottom: 20px
+            border-bottom: 1px solid $the-lightest-grey
+            padding-bottom: 10px
+            @include max-large
+                margin-bottom: 10px
         .cost
             color: $pink
             +font-bold(18px)
             text-transform: uppercase
+            @include max-large
+                margin-bottom: 6px
         .buy-info
             display: flex
             align-items: center
             justify-content: space-between
+            @include max-large
+                flex-flow: column
+                margin-top: 8px
         .buy
             width: 100px
             font-size: 18px

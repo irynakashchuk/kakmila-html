@@ -1,3 +1,9 @@
+@import "./grid.sass"
+@import "./fonts.sass"
+@import "./variables.sass"
+@import "./mixins.sass"
+@import "./hamburger.scss"
+
 // COMMON
 *
     box-sizing: border-box
@@ -5,9 +11,14 @@ body
     +font-normal(14px)
     margin: 0
     color: $dark-grey
+    overflow-x: hidden
 .wrapper
     width: $large-width
     margin: 0 auto
+    @include max-extra-large
+        width: 1000px
+    @include max-large
+        width: 690px
 
 // styles for links
 a

@@ -9,6 +9,11 @@ header
     position: relative
     .wrapper
         padding-left: 170px
+        @include max-extra-large
+            padding-left: 130px
+            padding-right: 10px
+        @include max-large
+            padding-left: 110px
     .top-menu
         width: 100%
         background: $lightest-grey
@@ -29,6 +34,13 @@ header
                 justify-content: space-between
                 margin-right: 85px
                 color: $grey
+                @include max-extra-large
+                    margin-right: 40px
+                    width: 400px
+                    font-size: 14px
+                @include max-large
+                    width: 440px
+                    margin-right: 20px
             .logo-white
                 position: absolute
                 background: $pink
@@ -41,33 +53,87 @@ header
                 left: 0
                 box-shadow: 2px 4px 15px rgba(76, 1, 37, 0.15)
                 border-radius: 0px 0px 10px 10px
+                @include max-large
+                    width: 90px
+                    height: 138px
+                img
+                    @include max-large
+                        width: 53px
+            .phone-mobile
+                display: none
+                @include max-large
+                    display: block
             .phones-list
                 display: flex
                 flex-flow: row nowrap
                 justify-content: flex-start
                 align-items: center
                 margin-right: 30px
+                @include max-extra-large
+                    margin-right: 16px
+                @include max-large
+                    display: none
             .phone
                 display: flex
                 align-items: center
                 justify-content: flex-start
                 margin-right: 30px
+                @include max-extra-large
+                    font-size: 12px
+                    margin-right: 12px
                 &:last-child
                     margin-right: 0
                 img
                     margin-right: 8px
+                    @include max-extra-large
+                        width: 12px
+                        height: 12px
             .call-back
                 width: 110px
                 text-align: center
+                @include max-extra-large
+                    display: none
+                &.mobile
+                    display: none
+                    @include max-extra-large
+                        display: block
+                        width: 60px
+                        text-align: right
     .main-menu
         height: 60px
         background: $white
+        position: relative
         .wrapper
             display: flex
             align-items: center
             justify-content: space-between
             flex-flow: row nowrap
             height: 100%
+            padding-left: 155px
+            @include max-extra-large
+                padding-left: 120px
+                padding-right: 10px
+            @include max-large
+                padding-left: 97px
+        .hamburger
+            display: none
+            @include max-large
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                .hamburger-box
+                    margin-right: 8px
+                p
+                    color: $pink
+                .catalog
+                    display: block
+                .close
+                    display: none
+                &.is-active
+                    .catalog
+                        display: none
+                    .close
+                        display: block
         nav
             color: $dark-grey
             height: 100%
@@ -75,14 +141,62 @@ header
             align-items: center
             position: relative
             z-index: 1
+            @include max-extra-large
+                margin-right: 10px
+            @include max-large
+                height: 0
+                opacity: 0
+                display: none
+                transition: 1s
+                &.mobile-menu
+                    height: auto
+                    opacity: 1
+                    display: block
+                    position: absolute
+                    top: 100%
+                    left: 0
+                    width: 100%
+                    background: $white
+                    padding: 60px 0
+                    .wrapper
+                        padding: 0
+                        display: flex
+                        flex-flow: column
+                        justify-content: flex-start
+                        align-items: flex-start
+                    .menu-item
+                        width: 210px
+                        border-right: 1px solid $the-lightest-grey
+                        position: relative
+                        a
+                            padding: 14px 20px
+                        .sub-menu
+                            left: -500px
+                            top: 0
+                            box-shadow: none
+                            z-index: 0
+                            transition: .3s opacity
+                            nav
+                                height: auto
+                                opacity: 1
+                                padding: 0 0 0 30px
+                                a
+                                    margin-bottom: 0
+                                    padding: 10px 14px
+                                    transition: .1s
+                        &:hover
+                            .sub-menu
+                                left: 100%
+                                top: 0
             .menu-item
                 height: 100%
                 display: flex
                 align-items: center
-                padding: 0 15px
                 background: $white
                 &:not(:last-child)
                     margin-right: 5px
+                    @include max-extra-large
+                        margin-right: 0
                 &:not(:hover)
                     background: $white
                 &:hover
@@ -93,6 +207,15 @@ header
                         top: 100%
                         a
                             opacity: 1
+                & > a
+                    display: flex
+                    width: 100%
+                    height: 100%
+                    align-items: center
+                    justify-content: flex-start
+                    padding: 0 15px
+                    @include max-extra-large
+                        padding: 0 10px
         .sub-menu
             position: absolute
             top: -300px
@@ -107,6 +230,8 @@ header
                 align-items: flex-start
                 justify-content: flex-start
                 padding: 25px 30px 25px 40px
+                @include max-extra-large
+                    padding-left: 25px
                 a
                     width: 100%
                     white-space: nowrap
@@ -119,16 +244,24 @@ header
             align-items: center
             justify-content: center
             flex-flow: row
+            @include max-extra-large
+                justify-content: flex-end
         .search
             margin-right: 30px
             padding-top: 6px
+            @include max-extra-large
+                margin-right: 30px
         .cart
             display: flex
             flex-flow: row nowrap
             justify-content: flex-start
             align-items: center
+            @include max-extra-large
+                justify-content: flex-end
             img
                 margin-right: 19px
+                @include max-extra-large
+                    margin-right: 15px
             & > div
                 display: flex
                 flex-flow: column

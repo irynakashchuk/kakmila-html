@@ -7,18 +7,33 @@
 	background-repeat: no-repeat
 	padding: 120px 0
 	margin-bottom: 70px
+	@include max-extra-large
+		background-position: 50%
+	@include max-large
+		background-size: cover
+		padding: 90px 0
+		background-position: 50%
 	.wrapper
 		display: flex
 		flex-flow: row
 		justify-content: flex-start
 	.form-text
 		max-width: 450px
+		@include max-large
+			max-width: 300px
 		h4
 			color: $white
+			@include max-large
+				font-size: 30px
+				margin-top: 50px
 		p
 			+font-lighter(22px)
 			width: 320px
 			line-height: 32px
+			@include max-large
+				font-size: 14px
+				white-space: normal
+				width: 280px
 	.form
 		position: relative
 		display: flex
@@ -30,6 +45,9 @@
 			height: 100%
 			padding-left: 110px
 			position: relative
+			@include max-extra-large
+				padding-left: 0
+				width: 0
 			p
 				color: $white
 				width: 260px
@@ -38,11 +56,28 @@
 				position: absolute
 				bottom: 90px
 				left: -110px
+				font-size: 30px
+				@include max-extra-large
+					transform: rotate(0deg)
+					top: -50px
+					left: 98%
+					width: 400px
+					word-break: keep-all
+					white-space: nowrap
+				@include max-large
+					font-size: 26px
 			img
 				height: 100px
 				position: absolute
 				top: 0
 				left: 0
+				@include max-extra-large
+					top: -30px
+					left: 400px
+					transform: rotate(180deg)
+				@include max-large
+					left: 350px
+					transform: rotate(160deg)
 		form
 			background: $white
 			border: 10px solid $pink
@@ -51,6 +86,12 @@
 			flex-flow: column
 			margin-right: 70px
 			min-width: 410px
+			@include max-extra-large
+				margin-right: 120px
+			@include max-large
+				width: 380px
+				min-width: unset
+				margin-right: 30px
 			div
 				position: relative
 			label

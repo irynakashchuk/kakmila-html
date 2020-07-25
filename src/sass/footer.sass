@@ -4,17 +4,24 @@
 
 footer
   padding-bottom: 65px
+  @include max-large
+    padding-bottom: 30px
   .wrapper
     display: flex
     flex-flow: row
     align-items: flex-start
     justify-content: space-between
+    @include max-large
+      flex-flow: row wrap
     .logo-footer
       width: 80px
       height: 160px
     .footer-column
       display: flex
       flex-flow: column
+      @include max-large
+        margin-bottom: 40px
+        min-width: 33%
       nav
         display: flex
         flex-flow: column
@@ -46,6 +53,10 @@ footer
         align-items: center
         justify-content: space-between
         margin-top: 24px
+        @include max-large
+          justify-content: flex-start
         a
           width: 24px
           height: 24px
+          @include max-large
+            margin-right: 12px

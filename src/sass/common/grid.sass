@@ -1,0 +1,16 @@
+$max-extra-large: 1320px
+$max-large: 1024px
+//$max-medium: 1200px
+//$max-small: 992px
+//$max-extra-small: 768px
+//$max-tiny: 576px
+//$max-extra-tiny: 375px
+//$max-cart-width: 620px
+
+@mixin max-extra-large
+    @media (max-width: $max-extra-large)
+      @content
+
+@mixin max-large
+  @media (max-width: $max-large)
+    @content
