@@ -18,25 +18,42 @@
     align-items: center
     justify-content: center
     margin-bottom: 120px
+    @include max-medium
+        margin-bottom: 30px
+    @include max-small
+        height: 300px
     img
         width: 100%
         top: 0
         left: 0
         height: 100%
+        @include max-small
+            height: 100%
+            width: auto
     .slider-text
         width: 635px
         color: $dark-grey
         position: absolute
+        @include max-medium
+            width: 90%
+        @include max-small
+            width: 70%
         h1
             +font-bold(66px)
             @include max-large
                 +font-bold(42px)
+            @include max-medium
+                +font-bold(30px)
+            @include max-small
+                +font-bold(18px)
 
 // CATEGORY
 .category-list
     display: flex
     flex-flow: row wrap
     justify-content: flex-start
+    @include max-medium
+        justify-content: space-between
     .line
         display: flex
         flex-flow: row wrap
@@ -50,6 +67,9 @@
             max-width: 227px
         @include max-large
             max-width: 150px
+        @include max-medium
+            max-width: 47%
+            margin-right: 0
         &:nth-child(4n) 
             margin-right: 0
         img
@@ -59,6 +79,10 @@
             border-radius: 10px
             @include max-large
                 height: 210px
+            @include max-medium
+                height: 310px
+            @include max-small
+                height: 180px
         p
             height: 2em
             margin: 18px 0 0
@@ -78,6 +102,10 @@
                 height: 420px
                 @include max-large
                     height: 225px
+                @include max-medium
+                    height: 310px
+                @include max-small
+                    height: 180px
         &:nth-child(n+5)
             align-self: flex-end
         &:nth-child(n+8)
@@ -105,6 +133,8 @@
             margin-bottom: 60px
             @include max-large
                 width: 33%
+            @include max-small
+                width: 50%
             .item-content
                 max-width: 190px
                 margin: 0 auto
@@ -131,6 +161,8 @@
                 margin: 20px 0
                 @include max-large
                     font-size: 22px
+                @include max-medium
+                    font-size: 18px
 
 // POPULAR
 .popular
@@ -152,6 +184,8 @@
     @include max-large
         &:first-child
             margin-left: 0
+    @include max-small
+        margin-left: 10px
 
 
 // PRODUCT LIST
@@ -161,6 +195,8 @@
     justify-content: flex-start
     flex-flow: row wrap
     margin-bottom: 120px
+    @include max-medium
+        justify-content: space-between
 
 // CAR SECTION
 
@@ -180,6 +216,10 @@
         display: flex
         align-items: center
         justify-content: center
+        @include max-medium
+            left: 25%
+        @include max-small
+            left: 15%
         img
             position: absolute
             top: -50%
@@ -193,6 +233,10 @@
                 width: 180px
                 height: auto
                 top: -38%
+            @include max-small
+                width: 100px
+                right: -10%
+                top: -40%
         .italic
             font-size: 22px
             width: 70%
@@ -204,6 +248,10 @@
         top: -10%
         @include max-large
             top: 10%
+        @include max-medium
+            top: 30%
+        @include max-small
+            top: 40%
     .wrapper
         position: relative
         z-index: 1
@@ -219,6 +267,9 @@
             background: $the-lightest-grey
             @include max-extra-large
                 padding: 50px 45px 320px
+            @include max-medium
+                justify-content: center
+                padding-bottom: 420px
             &:after
                 content: ""
                 position: absolute
@@ -240,10 +291,19 @@
             width: 320px
             .title
                 font-size: 30px
+                @include max-medium
+                    text-align: center
+                    margin: 15px 0
+        @include max-medium
+            justify-content: center
+            align-items: center
         p
             margin-bottom: 40px
             @include max-large
                 font-size: 14px
+            @include max-medium
+                text-align: center
+                margin-bottom: 30px
         .btn
             padding: 30px 100px
             @include max-large
@@ -271,6 +331,8 @@
             @include max-large
                 width: 46%
                 margin-bottom: 30px
+            @include max-small
+                width: 100%
             &:hover
                 box-shadow: 0px 10px 25px rgba(243, 73, 112, 0.5)
             .icon

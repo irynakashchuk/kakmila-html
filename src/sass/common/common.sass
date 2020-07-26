@@ -19,6 +19,12 @@ body
         width: 1000px
     @include max-large
         width: 690px
+    @include max-medium
+        width: 510px
+    @include max-small
+        width: 320px
+    @include max-tiny
+        width: 280px
 
 // styles for links
 a
@@ -55,6 +61,8 @@ a.nav-link
 // standard styles for titles
 .title
     +font-bold(48px)
+    @include max-small
+        +font-bold(30px)
 .medium-title
     +font-bold(22px)
     color: $dark-grey
@@ -69,6 +77,11 @@ a.nav-link
     color: $dark-grey
     background: $lighter-grey
     cursor: pointer
+    @include max-medium
+        padding: 7px 23px
+    @include max-small
+        +font-light(14px)
+        padding: 3px 9px
     &:hover
         background: $the-lightest-grey
         color: $dark-grey
@@ -77,6 +90,8 @@ a.nav-link
         color: $white
         background: $pink
         cursor: default
+        @include max-small
+            +font-light(14px)
         &:hover
             +font-bold(18px)
             color: $white

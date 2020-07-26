@@ -16,12 +16,24 @@ footer
     .logo-footer
       width: 80px
       height: 160px
+      @include max-small
+        width: 51px
+        height: 103px
+        img
+          width: 100%
+          height: 100%
     .footer-column
       display: flex
       flex-flow: column
       @include max-large
         margin-bottom: 40px
         min-width: 33%
+      @include max-small
+        min-width: 100%
+        align-items: center
+        &:nth-child(2)
+          max-width: 80%
+          min-width: 78%
       nav
         display: flex
         flex-flow: column

@@ -14,6 +14,8 @@ header
             padding-right: 10px
         @include max-large
             padding-left: 110px
+        @include max-medium
+            padding-left: 0
     .top-menu
         width: 100%
         background: $lightest-grey
@@ -21,6 +23,8 @@ header
         padding: 10px 0
         position: relative
         z-index: 2
+        @include max-medium
+            display: none
         .top
             height: 100%
             position: relative
@@ -41,24 +45,6 @@ header
                 @include max-large
                     width: 440px
                     margin-right: 20px
-            .logo-white
-                position: absolute
-                background: $pink
-                width: 110px
-                height: 160px
-                display: flex
-                align-items: center
-                justify-content: center
-                top: -10px
-                left: 0
-                box-shadow: 2px 4px 15px rgba(76, 1, 37, 0.15)
-                border-radius: 0px 0px 10px 10px
-                @include max-large
-                    width: 90px
-                    height: 138px
-                img
-                    @include max-large
-                        width: 53px
             .phone-mobile
                 display: none
                 @include max-large
@@ -73,21 +59,6 @@ header
                     margin-right: 16px
                 @include max-large
                     display: none
-            .phone
-                display: flex
-                align-items: center
-                justify-content: flex-start
-                margin-right: 30px
-                @include max-extra-large
-                    font-size: 12px
-                    margin-right: 12px
-                &:last-child
-                    margin-right: 0
-                img
-                    margin-right: 8px
-                    @include max-extra-large
-                        width: 12px
-                        height: 12px
             .call-back
                 width: 110px
                 text-align: center
@@ -99,10 +70,67 @@ header
                         display: block
                         width: 60px
                         text-align: right
+    .phone
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        margin-right: 30px
+        @include max-extra-large
+            font-size: 12px
+            margin-right: 12px
+        @include max-medium
+            font-size: 14px
+            margin-right: 0
+            margin-bottom: 20px
+        &:last-child
+            margin-right: 0
+        img
+            margin-right: 8px
+            @include max-extra-large
+                width: 12px
+                height: 12px
+            @include max-medium
+                width: 20px
+                height: 20px
+    .logo-white
+        position: absolute
+        background: $pink
+        width: 110px
+        height: 160px
+        display: flex
+        align-items: center
+        justify-content: center
+        top: -10px
+        left: 0
+        box-shadow: 2px 4px 15px rgba(76, 1, 37, 0.15)
+        border-radius: 0px 0px 10px 10px
+        @include max-large
+            width: 90px
+            height: 138px
+        @include max-medium
+            position: relative
+            margin-top: 62px
+            width: 70px
+            height: 102px
+        @include max-small
+            width: 50px
+            height: 76px
+            margin-top: 36px
+        img
+            @include max-large
+                width: 53px
+            @include max-medium
+                width: 40px
+            @include max-small
+                width: 30px
     .main-menu
         height: 60px
         background: $white
         position: relative
+        .from-top,
+        .logo-white,
+        .phones-list
+            display: none
         .wrapper
             display: flex
             align-items: center
@@ -115,6 +143,11 @@ header
                 padding-right: 10px
             @include max-large
                 padding-left: 97px
+            @include max-medium
+                padding-left: 0
+                padding-right: 0
+                .logo-white
+                    display: flex
         .hamburger
             display: none
             @include max-large
@@ -127,13 +160,29 @@ header
                     color: $pink
                 .catalog
                     display: block
-                .close
+                .close,
+                .menu
                     display: none
                 &.is-active
                     .catalog
                         display: none
                     .close
                         display: block
+            @include max-medium
+                position: relative
+                z-index: 2
+                .close,
+                .catalog
+                    display: none
+                .menu
+                    display: block
+                &.is-active
+                    .menu
+                        display: none
+                    .close
+                        display: block
+            @include max-small
+                padding: 15px 0
         nav
             color: $dark-grey
             height: 100%
@@ -158,6 +207,9 @@ header
                     width: 100%
                     background: $white
                     padding: 60px 0
+                    .from-top,
+                    .phones-list
+                        display: none
                     .wrapper
                         padding: 0
                         display: flex
@@ -188,6 +240,43 @@ header
                             .sub-menu
                                 left: 100%
                                 top: 0
+            @include max-medium
+                &.mobile-menu
+                    top: 0
+                    .menu-item
+                        border-right: none
+                        @include max-small
+                            width: 100%
+                    .from-top
+                        height: auto
+                        opacity: 1
+                        display: flex
+                        flex-flow: column
+                        justify-content: space-between
+                        align-items: flex-start
+                        margin-top: 30px
+                        border-bottom: 1px solid $the-lightest-grey
+                        border-top: 1px solid $the-lightest-grey
+                        width: 210px
+                        margin-bottom: 30px
+                        .nav-link
+                            color: $grey
+                            padding: 14px 20px
+                    .phones-list
+                        display: flex
+                        flex-flow: column
+                        align-items: flex-start
+                        justify-content: center
+                        padding-left: 14px
+            @include max-small
+                &.mobile-menu
+                    .menu-item
+                        .sub-menu
+                            transition: unset
+                        &:hover
+                            .sub-menu
+                                left: unset
+                                top: unset
             .menu-item
                 height: 100%
                 display: flex
@@ -216,6 +305,15 @@ header
                     padding: 0 15px
                     @include max-extra-large
                         padding: 0 10px
+                @include max-small
+                    flex-flow: column
+                    &:hover
+                        .sub-menu
+                            width: 100%
+                            height: auto
+                            background: $white
+                            .nav-link
+                                +font-lighter(14px)
         .sub-menu
             position: absolute
             top: -300px
@@ -239,6 +337,9 @@ header
                     +font-light(14px)
                     &:not(:last-child)
                         margin-bottom: 30px
+            @include max-small
+                position: relative
+                height: 0
         .right
             display: flex
             align-items: center
@@ -256,15 +357,34 @@ header
             flex-flow: row nowrap
             justify-content: flex-start
             align-items: center
+            position: relative
             @include max-extra-large
                 justify-content: flex-end
+            .count-mobile
+                display: none
+                background: $pink
+                border-radius: 50%
+                color: $white
+                width: 15px
+                height: 15px
+                align-items: center
+                justify-content: center
+                top: 2px
+                right: -7px
+                @include max-small
+                    display: flex
+                    position: absolute
             img
                 margin-right: 19px
                 @include max-extra-large
                     margin-right: 15px
+                @include max-small
+                    margin-right: 0
             & > div
                 display: flex
                 flex-flow: column
+                @include max-small
+                    display: none
             .total
                 +font-bold(18px)
             .count-items

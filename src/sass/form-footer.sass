@@ -13,10 +13,16 @@
 		background-size: cover
 		padding: 90px 0
 		background-position: 50%
+	@include max-medium
+		background-size: auto 70%
+		background-position: 70% 0
+		padding: 85px 0
 	.wrapper
 		display: flex
 		flex-flow: row
 		justify-content: flex-start
+		@include max-medium
+			flex-flow: column-reverse
 	.form-text
 		max-width: 450px
 		@include max-large
@@ -38,6 +44,8 @@
 		position: relative
 		display: flex
 		align-items: center
+		@include max-medium
+			flex-flow: column
 		.arrow-area
 			display: flex
 			flex-flow: row
@@ -48,6 +56,8 @@
 			@include max-extra-large
 				padding-left: 0
 				width: 0
+			@include max-medium
+				width: auto
 			p
 				color: $white
 				width: 260px
@@ -66,6 +76,17 @@
 					white-space: nowrap
 				@include max-large
 					font-size: 26px
+				@include max-medium
+					transform: none
+					top: unset
+					left: unset
+					bottom: unset
+					position: relative
+					margin-bottom: 16px
+				@include max-small
+					white-space: normal
+					width: 280px
+					font-size: 20px
 			img
 				height: 100px
 				position: absolute
@@ -78,6 +99,14 @@
 				@include max-large
 					left: 350px
 					transform: rotate(160deg)
+				@include max-medium
+					transform: rotate(140deg)
+					top: 30px
+				@include max-small
+					top: 0px
+					left: 64%
+					transform: rotate(120deg)
+					height: 60px
 		form
 			background: $white
 			border: 10px solid $pink
@@ -92,6 +121,10 @@
 				width: 380px
 				min-width: unset
 				margin-right: 30px
+			@include max-small
+				width: 280px
+				margin-right: 0
+				padding: 80px 30px 60px
 			div
 				position: relative
 			label

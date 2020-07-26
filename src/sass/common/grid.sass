@@ -1,11 +1,8 @@
 $max-extra-large: 1320px
 $max-large: 1024px
-//$max-medium: 1200px
-//$max-small: 992px
-//$max-extra-small: 768px
-//$max-tiny: 576px
-//$max-extra-tiny: 375px
-//$max-cart-width: 620px
+$max-medium: 768px
+$max-small: 575px
+$max-tiny: 375px
 
 @mixin max-extra-large
     @media (max-width: $max-extra-large)
@@ -13,4 +10,16 @@ $max-large: 1024px
 
 @mixin max-large
   @media (max-width: $max-large)
+    @content
+
+@mixin max-medium
+  @media (max-width: $max-medium)
+    @content
+
+@mixin max-small
+  @media (max-width: $max-small)
+    @content
+
+@mixin max-tiny
+  @media (max-width: $max-tiny)
     @content
