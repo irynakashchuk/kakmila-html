@@ -68,6 +68,9 @@ a.nav-link
     color: $dark-grey
     &.light
         +font-lighter(22px)
+.small-title
+    +font-bold(30px)
+    color: $dark-grey
 
 // tab button/sorting
 .tab-button
@@ -109,9 +112,38 @@ a.nav-link
     cursor: pointer
     &.uppercase
         text-transform: uppercase
+    &.transparent
+        background: transparent
+        color: $grey
+        box-shadow: none
+        border: 2px solid $pink
+        +font-lighter(14px)
+        padding: 15px 30px
+        &:hover
+            color: $white
     &:hover
         background: linear-gradient(180deg, #EE4C73 0%, #E71C4C 100%)
 
 // italic
 .italic
     +font-italic(36px)
+
+.breadcrumbs
+    padding: 30px 0 30px 170px
+    display: flex
+    flex-flow: row
+    margin-bottom: 50px
+    @include max-extra-large
+        padding-left: 130px
+    @include max-large
+        padding-left: 110px
+    @include max-medium
+        padding-left: 0
+    .text,
+    .separator,
+    .link
+        +font-lighter(14px)
+        color: $grey
+        text-decoration: none
+    & > *:not(:last-child)
+        margin-right: 12px
