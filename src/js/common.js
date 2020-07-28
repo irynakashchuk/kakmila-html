@@ -1,21 +1,33 @@
-const hamburger = document.querySelector(".hamburger");
+const hamburger = document.querySelector("header .hamburger");
+const categoryHamburger = document.querySelector(".catalog .hamburger")
 const menu = document.querySelector(".main-menu nav");
-const initialMenu = menu.innerHTML;
+const categoryMenu = document.querySelector(".category-full-list")
 
 hamburger.addEventListener("click", function() {
     hamburger.classList.contains("is-active")
-        ? closeMenu()
-        : openMenu();
+        ? closeMenu(hamburger, menu)
+        : openMenu(hamburger, menu);
 });
 
-function openMenu() {
+categoryHamburger
+    && categoryHamburger.addEventListener("click", function() {
+        categoryHamburger.classList.contains("is-active")
+            ? closeMenu(categoryHamburger, categoryMenu)
+            : openMenu(categoryHamburger, categoryMenu);
+    });
+
+function openMenu(hamburger, currentMenu) {
     hamburger.classList.add("is-active");
-    menu.classList.add("mobile-menu");
-    menu.innerHTML = `<div class='wrapper'>${initialMenu}</div>`;
+    currentMenu.classList.add("mobile-menu");
+    currentMenu.innerHTML = `<div class='wrapper'>${initialMenu(currentMenu)}</div>`;
 }
 
-function closeMenu() {
+function closeMenu(hamburger, currentMenu) {
     hamburger.classList.remove("is-active");
-    menu.classList.remove("mobile-menu");
-    menu.innerHTML = initialMenu;
+    currentMenu.classList.remove("mobile-menu");
+    currentMenu.innerHTML = initialMenu(currentMenu);
+}
+
+function initialMenu(menu) {
+    return menu.innerHTML
 }

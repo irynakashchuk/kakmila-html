@@ -30,6 +30,9 @@ body
 a
     color: inherit
     text-decoration: none
+    &:hover
+        color: inherit
+        text-decoration: none
 a.nav-link
     &:hover
         color: $pink
@@ -121,6 +124,13 @@ a.nav-link
         padding: 15px 30px
         &:hover
             color: $white
+        &-black
+            border: 2px solid $grey
+            transition: .1s
+            &:hover
+                border: 2px solid $pink
+                background: transparent
+                color: $dark-grey
     &:hover
         background: linear-gradient(180deg, #EE4C73 0%, #E71C4C 100%)
 
@@ -138,7 +148,8 @@ a.nav-link
     @include max-large
         padding-left: 110px
     @include max-medium
-        padding-left: 0
+        margin-bottom: 0
+        padding: 50px 0 20px
     .text,
     .separator,
     .link
