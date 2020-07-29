@@ -75,13 +75,13 @@
     </div>
     <div class="category-full-list">
         <p class="small-title">Категории</p>
-        <nav class="list">
-            <div class="first-item item-list open">
+        <nav class="list" id="accordion">
+            <div class="card first-item item-list" id="category1">
                 <a href="#">Воздушные шары</a>
-                <span class="plus">+</span>
+                <span class="plus" data-toggle="collapse" data-target="#collapseCategory1" aria-expanded="true" aria-controls="collapseCategory1">+</span>
                 <span class="minus">&ndash;</span>
-                <div class="sub-list">
-                    <div class="sub-item item-list open">
+                <div class="sub-list collapse" id="collapseCategory1" class="collapse show" aria-labelledby="category1" data-parent="#accordion">
+                    <div class="sub-item item-list">
                         <a href="#">Воздушные шары</a>
                         <span class="plus">+</span>
                         <span class="minus">&ndash;</span>
@@ -98,25 +98,71 @@
                     </div>
                 </div>
             </div>
-            <div class="first-item item-list">
+            <div class="card first-item item-list" id="category2">
                 <a href="#">Воздушные шары</a>
-                <span class="plus">+</span>
+                <span class="plus" data-toggle="collapse" data-target="#collapseCategory2" aria-expanded="false" aria-controls="collapseCategory2">+</span>
                 <span class="minus">&ndash;</span>
+                <div class="sub-list collapse" id="collapseCategory2" class="collapse show" aria-labelledby="category2" data-parent="#accordion">
+                    <div class="sub-item item-list">
+                        <a href="#">Воздушные шары</a>
+                        <span class="plus">+</span>
+                        <span class="minus">&ndash;</span>
+                    </div>
+                    <div class="sub-item item-list">
+                        <a href="#">Воздушные шары</a>
+                        <span class="plus">+</span>
+                        <span class="minus">&ndash;</span>
+                    </div>
+                    <div class="sub-item item-list">
+                        <a href="#">Воздушные шары</a>
+                        <span class="plus">+</span>
+                        <span class="minus">&ndash;</span>
+                    </div>
+                </div>
             </div>
-            <div class="first-item item-list">
+            <div class="card first-item item-list" id="category3">
                 <a href="#">Воздушные шары</a>
-                <span class="plus">+</span>
+                <span class="plus" data-toggle="collapse" data-target="#collapseCategory3" aria-expanded="false" aria-controls="collapseCategory3">+</span>
                 <span class="minus">&ndash;</span>
+                <div class="sub-list collapse" id="collapseCategory3" class="collapse show" aria-labelledby="category3" data-parent="#accordion">
+                    <div class="sub-item item-list">
+                        <a href="#">Воздушные шары</a>
+                        <span class="plus">+</span>
+                        <span class="minus">&ndash;</span>
+                    </div>
+                    <div class="sub-item item-list">
+                        <a href="#">Воздушные шары</a>
+                        <span class="plus">+</span>
+                        <span class="minus">&ndash;</span>
+                    </div>
+                    <div class="sub-item item-list">
+                        <a href="#">Воздушные шары</a>
+                        <span class="plus">+</span>
+                        <span class="minus">&ndash;</span>
+                    </div>
+                </div>
             </div>
-            <div class="first-item item-list">
+            <div class="card first-item item-list" id="category4">
                 <a href="#">Воздушные шары</a>
-                <span class="plus">+</span>
+                <span class="plus" data-toggle="collapse" data-target="#collapseCategory4" aria-expanded="false" aria-controls="collapseCategory4">+</span>
                 <span class="minus">&ndash;</span>
-            </div>
-            <div class="first-item item-list">
-                <a href="#">Воздушные шары</a>
-                <span class="plus">+</span>
-                <span class="minus">&ndash;</span>
+                <div class="sub-list collapse" id="collapseCategory4" class="collapse show" aria-labelledby="category4" data-parent="#accordion">
+                    <div class="sub-item item-list">
+                        <a href="#">Воздушные шары</a>
+                        <span class="plus">+</span>
+                        <span class="minus">&ndash;</span>
+                    </div>
+                    <div class="sub-item item-list">
+                        <a href="#">Воздушные шары</a>
+                        <span class="plus">+</span>
+                        <span class="minus">&ndash;</span>
+                    </div>
+                    <div class="sub-item item-list">
+                        <a href="#">Воздушные шары</a>
+                        <span class="plus">+</span>
+                        <span class="minus">&ndash;</span>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
