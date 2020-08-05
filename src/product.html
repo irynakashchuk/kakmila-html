@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+//= ./partials/head.html
+<body>
+//= ./partials/header.html
+//= ./partials/breadcrumbs.html
+<div class="wrapper product-page">
+    <div class="images">
+        <div class="main">
+            <img src="images/product.jpg" alt="">
+        </div>
+        <ul class="preview-images">
+            <li class="active">
+                <img src="images/product.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/product.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/product.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/product.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <div class="product-title">
+        <h1>Композиция №11, фламинго вторая строка</h1>
+        <p class="availability">В НАЛИЧИИ / Арт. GC-37</p>
+    </div>
+    <div class="product-price">
+        <span class="price">960 UAH</span>
+        <div class="counter">
+            <button class="btn-count minus">&ndash;</button>
+            <input readonly type="number" value="1">
+            <button class="btn-count plus">+</button>
+        </div>
+        <button class="btn uppercase buy">Купить</button>
+    </div>
+    <div class="options">
+        <fieldset>
+            <label for="handle">Обработка шара</label>
+            <select name="handle" id="handle">
+                <option value="1">Без обработки</option>
+                <option value="2">С обработкой</option>
+            </select>
+        </fieldset>
+<!--        <fieldset>-->
+<!--            <label>Наполнение</label>-->
+<!--            <label for="fill1">Воздух</label>-->
+<!--            <input type="radio" name="fill" id="fill1">-->
+<!--            <label for="fill2">Гелий</label>-->
+<!--            <input type="radio" name="fill" id="fill2">-->
+<!--        </fieldset>-->
+    </div>
+    <div class="product-description">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <p class="accordion-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Описание
+                            <span class="plus">+</span>
+                            <span class="minus">&ndash;</span>
+                        </p>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse in" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="description-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <p class="accordion-title collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                            <span class="plus">+</span>
+                            <span class="minus">&ndash;</span>
+                        </p>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="description-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+//= ./partials/how-to-make-order.html
+//= ./partials/form-footer.html
+//= ./partials/footer.html
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

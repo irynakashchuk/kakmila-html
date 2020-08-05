@@ -1,0 +1,118 @@
+.product-page
+    display: grid
+    grid-template-columns: 45% 35% auto
+    grid-template-rows: 150px 100px auto
+    grid-template-areas: 'images title price''images options price''images description .'
+    .images
+        width: 95%
+        display: flex
+        flex-flow: row
+        grid-area: images
+        .main
+            width: 450px
+            height: 630px
+            margin-right: 20px
+            img
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+                border-radius: 4px
+                width: 100%
+                height: 100%
+        ul
+            list-style: unset
+            padding-left: 0
+            li
+                width: 100px
+                height: 100px
+                list-style: none
+                cursor: pointer
+                &:not(:last-child)
+                    margin-bottom: 20px
+                &.active
+                    img
+                        border: 1px solid $pink
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    border-radius: 2px
+                    border: 1px solid $light-grey
+    .product-title
+        grid-area: title
+        h1
+            margin: 0 0 12px
+        .availability
+            color: $grey
+            text-transform: uppercase
+            +font-lighter(14px)
+    .product-price
+        grid-area: price
+        justify-self: end
+        border: 10px solid $pink
+        box-shadow: 0 10px 20px rgba($pink, 0.5)
+        padding: 34px
+        display: flex
+        flex-flow: column
+        align-items: center
+        width: 85%
+        .price
+            color: $pink
+            +font-light(24px)
+            line-height: 29px
+            margin-bottom: 30px
+        .counter
+            display: flex
+            flex-flow: row
+            margin-bottom: 30px
+            .btn-count
+                border-radius: 50%
+                background: $the-lightest-grey
+                border: 1px solid $lighter-grey
+                width: 34px
+                height: 34px
+            input
+                border: none
+                width: 50px
+                margin: 0 30px
+                text-align: center
+                &::-webkit-inner-spin-button,
+                &::-webkit-outer-spin-button,
+                &[type='number']
+                    -webkit-appearance: none
+                    margin: 0
+                    -moz-appearance: textfield
+                &:focus
+                    outline: none
+        .buy
+            width: 100%
+    .options
+        grid-area: options
+        display: flex
+        flex-flow: column
+        fieldset
+            display: flex
+            flex-flow: column
+            label
+                +font-lighter(12px)
+                font-weight: normal
+            select
+                width: 100%
+                padding: 8px 12px
+                +font-lighter(12px)
+                font-weight: normal
+                border: 1px solid rgba(0, 0, 0, 0.1)
+                border-radius: 4px
+    .product-description
+        grid-area: description
+        .accordion-title
+            cursor: pointer
+            color: $pink
+            +font-normal(18px)
+            .minus
+                display: none
+            &[aria-expanded=true]
+                .plus
+                    display: none
+                .minus
+                    display: inline
+        .description-body
+            +font-light(14px)

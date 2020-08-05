@@ -57,13 +57,15 @@ a.nav-link
 
 // dropdown
 .dropdown
-    transition: top .4s ease-out, opacity .1s linear
+    transition: top .4s ease-out, opacity .3s linear
     *
         transition: all .5s linear .25s
 
 // standard styles for titles
 .title
     +font-bold(48px)
+    margin-bottom: 30px
+    margin-top: revert
     @include max-small
         +font-bold(30px)
 .medium-title
@@ -133,6 +135,9 @@ a.nav-link
                 color: $dark-grey
     &:hover
         background: linear-gradient(180deg, #EE4C73 0%, #E71C4C 100%)
+        color: $white
+    &:active:focus
+        outline: none
 
 // italic
 .italic

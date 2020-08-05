@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a9713f25-1ea9-4060-9565-c04cba013f8e" name="leleka" url="http://tzk706.nic.ua">
+        <fileTransfer host="tzk706.nic.ua" port="2345" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="2345" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
