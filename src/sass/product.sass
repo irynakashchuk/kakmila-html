@@ -3,15 +3,37 @@
     grid-template-columns: 45% 35% auto
     grid-template-rows: 150px 100px auto
     grid-template-areas: 'images title price''images options price''images description .'
+    @include max-extra-large
+        grid-template-columns: 50% 50%
+        grid-template-rows: auto auto auto auto
+        grid-template-areas: 'images title''images price''images options''images description'
+    @include max-large
+        grid-template-columns: 40% 60%
+        grid-template-rows: auto auto auto auto auto
+        grid-template-areas: 'images title''images price''images options''images buy''description description'
+    @include max-small
+        grid-template-columns: 100%
+        grid-template-rows: auto auto auto auto auto
+        grid-template-areas: 'title''images''price''options'' buy''description'
     .images
         width: 95%
         display: flex
         flex-flow: row
         grid-area: images
+        @include max-small
+            width: 100%
+            margin-bottom: 40px
         .main
             width: 450px
             height: 630px
             margin-right: 20px
+            @include max-extra-large
+                width: 350px
+                height: auto
+            @include max-large
+                width: 200px
+            @include max-small
+                width: 90%
             img
                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
                 border-radius: 4px
@@ -25,6 +47,9 @@
                 height: 100px
                 list-style: none
                 cursor: pointer
+                @include max-large
+                    width: 46px
+                    height: 46px
                 &:not(:last-child)
                     margin-bottom: 20px
                 &.active
@@ -40,6 +65,8 @@
         grid-area: title
         h1
             margin: 0 0 12px
+            @include max-large
+                font-size: 22px
         .availability
             color: $grey
             text-transform: uppercase
@@ -54,15 +81,28 @@
         flex-flow: column
         align-items: center
         width: 85%
+        @include max-extra-large
+            width: 100%
+            border: none
+            flex-flow: row
+            box-shadow: none
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 30px
+            padding: 0
         .price
             color: $pink
             +font-light(24px)
             line-height: 29px
             margin-bottom: 30px
+            @include max-extra-large
+                margin-bottom: 0
         .counter
             display: flex
             flex-flow: row
             margin-bottom: 30px
+            @include max-extra-large
+                margin-bottom: 0
             .btn-count
                 border-radius: 50%
                 background: $the-lightest-grey
@@ -84,10 +124,17 @@
                     outline: none
         .buy
             width: 100%
+            @include max-extra-large
+                margin-bottom: 0
+                max-width: 200px
+            @include max-large
+                display: none
     .options
         grid-area: options
         display: flex
         flex-flow: column
+        @include max-extra-large
+            margin-bottom: 20px
         fieldset
             display: flex
             flex-flow: column
@@ -103,6 +150,8 @@
                 border-radius: 4px
     .product-description
         grid-area: description
+        @include max-large
+            margin-top: 40px
         .accordion-title
             cursor: pointer
             color: $pink
@@ -116,3 +165,8 @@
                     display: inline
         .description-body
             +font-light(14px)
+    .product-buy
+        grid-area: buy
+        display: none
+        @include max-large
+            display: block
