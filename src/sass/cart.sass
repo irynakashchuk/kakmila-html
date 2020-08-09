@@ -1,0 +1,90 @@
+@import "common/variables.sass"
+@import "common/mixins.sass"
+
+.cart-page
+    margin-bottom: 100px
+    table
+        border: none
+        @include max-medium
+            display: flex
+            flex-flow: column
+        td,
+        th
+            border: none
+            +font-lighter(14px)
+            line-height: 20px
+            color: $dark-grey
+        thead,
+        tr
+            border-bottom: 1px solid rgba($black, .1)
+        thead
+            @include max-medium
+                display: none
+        tr > td
+            padding: 30px 0
+            vertical-align: middle
+            @include max-medium
+                border: none
+        tr
+            @include max-medium
+                display: flex
+                flex-flow: row wrap
+                align-items: center
+                justify-content: space-between
+        .cart-image
+            width: 130px
+            @include max-small
+                width: 80px
+            img
+                border-radius: 4px
+                border: 1px solid $some-grey
+                height: 150px
+                @include max-small
+                    width: 80px
+                    height: auto
+        .cart-title
+            color: $grey
+            a
+                +font-normal(14px)
+                color: $dark-grey
+        .cart-price,
+        .cart-summ
+            font-size: 16px
+        .cart-remove
+            cursor: pointer
+    @include max-medium
+        .cart-image
+            order: 1
+        .cart-title
+            order: 2
+            min-width: 65%
+        .cart-remove
+            order: 3
+        .cart-price
+            order: 4
+        .cart-count
+            order: 5
+        .cart-summ
+            order: 6
+    @include max-small
+        .cart-image
+            order: 1
+        .cart-title
+            order: 2
+            min-width: 65%
+        .cart-remove
+            order: 6
+        .cart-price
+            order: 3
+            width: 50%
+        .cart-count
+            order: 4
+            width: 50%
+        .cart-summ
+            order: 5
+            width: 50%
+    .totals
+        tr,
+        td
+            border: none
+            font-size: 22px

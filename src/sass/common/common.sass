@@ -163,3 +163,29 @@ a.nav-link
         text-decoration: none
     & > *:not(:last-child)
         margin-right: 12px
+
+.counter
+    display: flex
+    flex-flow: row
+    margin-bottom: 30px
+    @include max-extra-large
+        margin-bottom: 0
+    .btn-count
+        border-radius: 50%
+        background: $the-lightest-grey
+        border: 1px solid $lighter-grey
+        width: 34px
+        height: 34px
+    input
+        border: none
+        width: 50px
+        margin: 0 30px
+        text-align: center
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button,
+        &[type='number']
+            -webkit-appearance: none
+            margin: 0
+            -moz-appearance: textfield
+        &:focus
+            outline: none
