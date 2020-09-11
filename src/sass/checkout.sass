@@ -1,0 +1,214 @@
+.checkout
+    display: flex
+    flex-flow: row
+    align-items: flex-start
+    justify-content: space-between
+    margin-bottom: 120px
+    @include max-large
+        flex-flow: column
+    & > div
+        width: 50%
+        @include max-large
+            width: 100%
+    .checkout-column
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        h2
+            width: 100%
+            margin-bottom: 40px
+        label
+            +font-lighter(12px)
+            font-weight: 300
+        .column
+            max-width: 47%
+            width: 47%
+            display: flex
+            flex-flow: column
+            align-items: flex-start
+            @include max-small
+                width: 100%
+                max-width: 100%
+            .form-group
+                display: flex
+                flex-flow: column
+                width: 100%
+                input
+                    width: 100%
+                    border: 1px solid rgba($black, 0.1)
+                    box-sizing: border-box
+                    border-radius: 4px
+                    padding: 11px 20px
+                    +font-lighter(12px)
+                    font-weight: 300
+            span
+                +font-lighter(14px)
+                font-weight: 300
+                color: $grey
+                margin-bottom: 25px
+            &.with-radio
+                justify-content: flex-start
+                margin-bottom: 30px
+                label
+                    +font-normal(14px)
+                    color: $black
+                [type="radio"]:checked,
+                [type="radio"]:not(:checked)
+                    position: absolute
+                    left: -9999px
+                [type="radio"]:checked + label,
+                [type="radio"]:not(:checked) + label
+                    position: relative
+                    padding-left: 28px
+                    cursor: pointer
+                    display: inline-block
+                [type="radio"]:checked + label:before,
+                [type="radio"]:not(:checked) + label:before
+                    content: ''
+                    position: absolute
+                    left: 0
+                    top: 5px
+                    width: 10px
+                    height: 10px
+                    border: 1px solid $pink
+                    border-radius: 100%
+                    background: $white
+                [type="radio"]:checked + label:after,
+                [type="radio"]:not(:checked) + label:after
+                    content: ''
+                    width: 10px
+                    height: 10px
+                    background: $pink
+                    position: absolute
+                    top: 5px
+                    left: 0
+                    border-radius: 100%
+                    -webkit-transition: all 0.2s ease
+                    transition: all 0.2s ease
+                    box-shadow: 0px 0px 10px $pink
+                [type="radio"]:not(:checked) + label:after
+                    opacity: 0
+                    -webkit-transform: scale(0)
+                    transform: scale(0)
+                [type="radio"]:checked + label:after
+                    opacity: 1
+                    -webkit-transform: scale(1)
+                    transform: scale(1)
+        textarea
+            width: 100%
+            border: 1px solid rgba($black, 0.1)
+            box-sizing: border-box
+            border-radius: 4px
+            margin-bottom: 30px
+    .checkout-form
+        @include max-large
+            margin-bottom: 40px
+        .make-checkout
+            width: 60%
+            display: flex
+            flex-flow: row
+            margin: 0 0 0 auto
+            align-items: center
+            justify-content: flex-end
+            @include max-small
+                width: 100%
+            div
+                margin-right: 24px
+                span
+                    +font-lighter(14px)
+                    font-weight: 300
+                    line-height: 24px
+                    color: $grey
+                p
+                    margin-bottom: 0
+            .btn
+                height: 60px
+                +font-lighter(14px)
+    .checkout-cart
+        width: 45%
+        position: relative
+        padding: 0 20px
+        @include max-large
+            width: 100%
+            padding: 30px 20px
+        &:before
+            content: ""
+            position: absolute
+            top: -130px
+            left: -3%
+            width: 200%
+            height: calc(100% + 180px)
+            background: $the-lightest-grey
+            z-index: 1
+            @include max-large
+                top: 0
+                left: -50%
+                height: 100%
+        &:after
+            content: ""
+            position: absolute
+            top: -130px
+            left: -3%
+            width: 200%
+            height: calc(100% + 180px)
+            background: url("../images/checkout-back.jpg")
+            z-index: 1
+            @include max-large
+                top: 0
+                left: -50%
+                height: 100%
+        & > *
+            position: relative
+            z-index: 2
+        .checkout-cart-header
+            margin-bottom: 16px
+            display: flex
+            flex-flow: row
+            justify-content: space-between
+            align-items: flex-start
+            @include max-small
+                a
+                    display: none
+            h2
+                margin: 0
+                span
+                    +font-lighter(14px)
+                    font-weight: 300
+                    line-height: 22px
+                    color: $grey
+        .checkout-cart-items
+            display: flex
+            flex-flow: column
+            max-height: 350px
+            overflow-y: auto
+            margin-bottom: 30px
+            .cart-item
+                height: 155px
+                padding: 23px 0
+                display: flex
+                flex-flow: row
+                @include max-small
+                    height: auto
+                &:not(:last-child)
+                    border-bottom: 1px solid rgba($black, .1)
+                img
+                    width: 80px
+                    margin-right: 16px
+                    border-radius: 4px
+                    border: 1px solid $some-grey
+                    height: 109px
+                .product-info
+                    display: flex
+                    flex-flow: column
+                    span
+                        +font-lighter(14px)
+                        font-weight: 300
+                        line-height: 22px
+                        color: $grey
+                        b
+                            color: $dark-grey
+                            margin-left: 3px
+                            &:not(:last-child)
+                                margin-right: 8px
+        .total-sum
+            +font-bold(16px)

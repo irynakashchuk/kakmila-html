@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+//= ./partials/head.html
+<body>
+//= ./partials/header.html
+//= ./partials/breadcrumbs.html
+<div class="wrapper checkout">
+    <div class="checkout-form">
+        <div class="checkout-column">
+            <h2 class="medium-title">Общие данные</h2>
+            <div class="column">
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name" placeholder="Имя">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email" id="email" placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                    <label for="address">Адрес доставки</label>
+                    <input type="text" name="address" id="address" placeholder="Адрес доставки">
+                </div>
+            </div>
+            <div class="column">
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="text" name="phone" id="phone" placeholder="Телефон">
+                </div>
+                <div class="form-group">
+                    <label for="city">Город</label>
+                    <input type="text" name="city" id="city" placeholder="Город">
+                </div>
+                <div class="form-group">
+                    <label for="date">Дата доставки</label>
+                    <input type="text" name="date" id="date" placeholder="Дата доставки">
+                </div>
+            </div>
+        </div>
+        <div class="checkout-column">
+            <div class="column with-radio">
+                <h2 class="medium-title">Способы оплаты</h2>
+                <span>Мы работаем по предоплате 50%–100% на карту привата не зависимо от выбранного Вами способа оплаты.</span>
+                <div class="radio">
+                    <input type="radio" name="payment" id="cash">
+                    <label for="cash">Оплата наличными при получении заказа</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="payment" id="card" checked>
+                    <label for="card">Предоплата на карту ПБ (менеджер свяжется с Вами)</label>
+                </div>
+            </div>
+            <div class="column with-radio">
+                <h2 class="medium-title">Способы доставки</h2>
+                <div class="radio">
+                    <input type="radio" name="delivery" id="delivery">
+                    <label for="delivery">Доставки (от 30 грн)</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="delivery" id="selfPickup" checked>
+                    <label for="selfPickup">Самовывоз по ул. Героев АТО 32</label>
+                </div>
+            </div>
+            <label for="comment">Комментарий к заказу:</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        </div>
+        <div class="make-checkout">
+            <div>
+                <span>Всего сумма</span>
+                <p>3 840 ГРН</p>
+            </div>
+            <button class="btn uppercase">Оформить заказ</button>
+        </div>
+    </div>
+    <div class="checkout-cart">
+        <div class="checkout-cart-header">
+            <h2 class="medium-title">
+                Корзина
+                <span>(7 товаров)</span>
+            </h2>
+            <a href="#" class="link">Назад в корзину</a>
+        </div>
+        <div class="checkout-cart-items">
+            <div class="cart-item">
+                <img src="images/product.jpg" alt="">
+                <div class="product-info">
+                    <p class="name">Нaзвание</p>
+                    <span>Обработка шара: Без обработки</span>
+                    <span>Наполнение: Воздух</span>
+                    <span>Кол-во <b>2</b> Cумма <b>1920 ГРН</b></span>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="images/product.jpg" alt="">
+                <div class="product-info">
+                    <p class="name">Нзвание</p>
+                    <span>Обработка шара: Без обработки</span>
+                    <span>Наполнение: Воздух</span>
+                    <span>Кол-во <b>2</b> сумма <b>1920 ГРН</b></span>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="images/product.jpg" alt="">
+                <div class="product-info">
+                    <p class="name">Нзвание</p>
+                    <span>Обработка шара: Без обработки</span>
+                    <span>Наполнение: Воздух</span>
+                    <span>Кол-во <b>2</b> сумма <b>1920 ГРН</b></span>
+                </div>
+            </div>
+        </div>
+        <p class="total-sum">
+            Всего сумма: 3 840,00 ГРН
+        </p>
+    </div>
+</div>
+//= ./partials/form-footer.html
+//= ./partials/footer.html
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
